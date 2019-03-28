@@ -1,0 +1,17 @@
+<h1>ipfspad</h1>
+{{!--
+<div>
+  <input type="file" id="file" onchange={{action this.onchange}} />
+</div>
+--}}
+<div>
+  <Textarea @value={{this.text}} rows=30 cols=80 />
+  <br/>
+  <button onclick={{action this.saveText}}>Save to IPFS</button>
+</div>
+
+{{#if this.path}}
+<div>
+  Saved! <a href="https://ipfs.io/ipfs/{{this.path}}">https://ipfs.io/ipfs/{{this.path}}</a>
+</div>
+{{/if}}
